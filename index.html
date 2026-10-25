@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jordyn Cambeiro</title>
+<meta name="description" content="Jordyn Cambeiro, Vanderbilt Human & Organizational Development senior pursuing executive search and HR.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&amp;family=Karla:wght@400;500;600&amp;family=Mrs+Saint+Delafield&amp;family=Cormorant+Garamond:ital,wght@1,500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F7E9E6}
+a{color:#6B1E2E}a:hover{color:#3E0F1A}
+</style>
+<style>html{scroll-behavior:smooth}</style>
+<style>
+/* A: hover polish */
+a, #top span, #leadership article, #loves figure > div {
+  transition: color .25s ease, background-color .25s ease, border-color .25s ease, transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s ease;
+}
+a[style*="background: #6B1E2E"] {
+  background-image: linear-gradient(#3E0F1A, #3E0F1A) !important;
+  background-repeat: no-repeat !important; background-size: 0% 100% !important;
+  transition: color .35s ease, background-size .45s cubic-bezier(.65,0,.35,1), transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s ease;
+}
+a[style*="background: #6B1E2E"]:hover {
+  background-size: 100% 100% !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px -10px rgba(107,30,46,.6);
+}
+a[style*="border: 1.5px solid"] {
+  background-image: linear-gradient(#6B1E2E, #6B1E2E);
+  background-repeat: no-repeat; background-size: 0% 100%;
+  transition: color .35s ease, background-size .45s cubic-bezier(.65,0,.35,1), transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s ease;
+}
+a[style*="border: 1.5px solid"]:hover {
+  background-size: 100% 100%;
+  color: #F7E9E6 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px -10px rgba(107,30,46,.6);
+}
+a[style*="999px"]:active { transform: translateY(0); box-shadow: none; }
+nav a { position: relative; }
+nav a:not([style*="border-bottom"])::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1.5px;
+  background: currentColor; transform: scaleX(0); transform-origin: left;
+  transition: transform .35s cubic-bezier(.2,.7,.2,1);
+}
+nav a:hover::after { transform: scaleX(1); }
+#top span:hover { transform: translateY(-2px); box-shadow: 0 6px 16px -8px rgba(107,30,46,.35); }
+#leadership article:hover { transform: translateY(-4px); box-shadow: 0 22px 40px -22px rgba(107,30,46,.4); }
+#loves figure:hover > div { transform: scale(1.02); background: #96404F !important; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+/* B: scroll reveals */
+.js-anim .rv {
+  opacity: 0; transform: translateY(26px);
+  transition: opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1);
+  transition-delay: var(--d, 0ms);
+}
+.js-anim [data-rv="1"] { --d: 90ms; }
+.js-anim [data-rv="2"] { --d: 180ms; }
+.js-anim [data-rv="3"] { --d: 270ms; }
+.js-anim [data-rv="4"] { --d: 360ms; }
+.js-anim [data-rv="5"] { --d: 450ms; }
+.js-anim [data-rv="6"] { --d: 540ms; }
+.js-anim #top > div:last-child.rv { transform: none; transition-duration: 1.4s; }
+.js-anim .rv.in, .js-anim #top > div:last-child.rv.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .js-anim .rv { opacity: 1; transform: none; }
+}
+/* C: signature, count-up, progress bar */
+.js-anim .sig {
+  display: inline-block; padding: 0 .35em; margin-left: -.35em;
+  -webkit-mask-image: linear-gradient(90deg, #000 45%, transparent 55%);
+          mask-image: linear-gradient(90deg, #000 45%, transparent 55%);
+  -webkit-mask-size: 260% 100%; mask-size: 260% 100%;
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+  -webkit-mask-position: 100% 0; mask-position: 100% 0;
+  transition: -webkit-mask-position 2.6s cubic-bezier(.45,.05,.3,1) .25s, mask-position 2.6s cubic-bezier(.45,.05,.3,1) .25s;
+}
+.js-anim .sig.in { -webkit-mask-position: 0 0; mask-position: 0 0; }
+#progress {
+  position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 10;
+  background: #6B1E2E; transform: scaleX(0); transform-origin: left; pointer-events: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .js-anim .sig { -webkit-mask-image: none; mask-image: none; }
+  #progress { display: none; }
+}
+
+/* D: drawn underlines, card accent bar */
+h2 em { position: relative; display: inline-block; }
+.swoosh { position: absolute; left: -2%; width: 104%; bottom: -.12em; height: .28em; overflow: visible; pointer-events: none; }
+.swoosh path { fill: none; stroke: #6B1E2E; stroke-width: 1.5; stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset 1.1s cubic-bezier(.6,0,.3,1) .5s; }
+.swoosh.in path { stroke-dashoffset: 0; }
+#leadership article { position: relative; overflow: hidden; }
+#leadership article::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px; background: #6B1E2E; transform: scaleX(0); transform-origin: left; transition: transform .5s cubic-bezier(.65,0,.35,1); }
+#leadership article:hover::before { transform: scaleX(1); }
+@media (prefers-reduced-motion: reduce) {
+  .swoosh path { stroke-dashoffset: 0; }
+}
+</style>
+</head>
+<body>
+<div style="background: #F7E9E6; color: #2A1A1D; font-family: 'Karla', system-ui, sans-serif; font-size: 17px; line-height: 1.7">
+
+<header style="max-width: 1160px; margin: 0 auto; padding: 28px 24px; display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: center; justify-content: space-between">
+<a href="#top" style="font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-weight: 500; font-size: 28px; text-decoration: none">Jordyn Cambeiro</a>
+<nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 8px 28px; font-size: 15px">
+<a href="#note" style="text-decoration: none; padding: 10px 0">About</a>
+<a href="#work" style="text-decoration: none; padding: 10px 0">Experience</a>
+<a href="#research" style="text-decoration: none; padding: 10px 0">Research</a>
+<a href="#leadership" style="text-decoration: none; padding: 10px 0">Leadership</a>
+<a href="#contact" style="text-decoration: none; padding: 10px 0; border-bottom: 1.5px solid #6B1E2E">Contact</a>
+</nav>
+</header>
+
+<section id="top" style="max-width: 1160px; margin: 0 auto; padding: 48px 24px 104px; display: flex; flex-wrap: wrap-reverse; gap: 56px; align-items: center">
+<div style="flex: 999 1 480px; min-width: 0">
+<h1 style="margin: 0 0 24px; font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-weight: 500; font-size: clamp(62px, 8.6vw, 124px); line-height: 0.95; letter-spacing: -0.01em; color: #6B1E2E">Hi, I'm Jordyn.</h1>
+<p style="margin: 0 0 32px; max-width: 520px; font-size: 20px; line-height: 1.6">I'm a Vanderbilt senior pursuing executive search and HR. I love understanding how people and organizations shape each other, and helping the right people find the right places.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 10px">
+<span style="padding: 8px 16px; background: #FFFFFF; border-radius: 999px; font-size: 14px">Human &amp; Organizational Development '27</span>
+<span style="padding: 8px 16px; background: #FFFFFF; border-radius: 999px; font-size: 14px">Cornelius Vanderbilt Scholar</span>
+<span style="padding: 8px 16px; background: #FFFFFF; border-radius: 999px; font-size: 14px">Fashion &amp; consumer goods</span>
+</div>
+</div>
+<div style="flex: 1 1 340px; max-width: 440px; min-width: 0; position: relative; padding: 0 20px 20px 0">
+<div aria-hidden="true" style="position: absolute; right: 0; bottom: 0; width: calc(100% - 20px); height: calc(100% - 20px); background: #6B1E2E; border-radius: 8px"></div>
+<img src="assets/headshot.webp" alt="Jordyn Cambeiro" style="position: relative; display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 30%; border-radius: 8px">
+</div>
+</section>
+
+<section id="note" style="background: #FFFFFF">
+<div style="max-width: 760px; margin: 0 auto; padding: 112px 24px">
+<p style="margin: 0 0 28px; font-size: 13px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #6B1E2E">A note from me</p>
+<p style="margin: 0 0 24px; font-family: 'Playfair Display', Georgia, serif; font-size: clamp(24px, 2.6vw, 32px); line-height: 1.4">I've always been the person who wants to know your story.</p>
+<p style="margin: 0 0 20px">That curiosity is what pulled me into Human and Organizational Development. I'm fascinated by how people shape the places they work, and how those places shape them back. It's also why I started Empowering Immigrants in high school, and why my honors thesis asks how college experiences shape the careers that follow.</p>
+<p style="margin: 0 0 20px">Executive search brings all of it together. I get to sit with a company and understand what it really needs, sit with a candidate and understand what they really want, and then find the place where both stories fit.</p>
+<p style="margin: 0 0 8px">Thank you for stopping by. I'd love to hear yours.</p>
+<p style="margin: 0; font-family: 'Mrs Saint Delafield', cursive; font-size: 64px; line-height: 1.2; color: #6B1E2E">Jordyn</p>
+</div>
+</section>
+
+<section id="work" style="max-width: 1160px; margin: 0 auto; padding: 112px 24px">
+<h2 style="margin: 0 0 56px; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: clamp(38px, 4.6vw, 60px); line-height: 1.05; color: #6B1E2E">Where I've <em>learned</em></h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 56px 64px">
+<article>
+<div style="font-size: 14px; color: #6E5559; margin-bottom: 8px">Summer 2026 · New York</div>
+<h3 style="margin: 0 0 4px; font-family: 'Playfair Display', Georgia, serif; font-weight: 500; font-size: 28px">LVMH Moët Hennessy Louis Vuitton</h3>
+<div style="font-style: italic; margin-bottom: 14px">Employee Benefits Communications Intern</div>
+<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px">
+<li>Coordinated with HR, 10 benefits vendors, and internal teams to reach 43,000 employees</li>
+<li>Built 4 benefits presentations used to train employees across 75+ U.S. Maisons</li>
+<li>Audited the benefits library, finding 60 duplicates and flagging 22 files for accessibility</li>
+</ul>
+</article>
+<article>
+<div style="font-size: 14px; color: #6E5559; margin-bottom: 8px">Summer 2025 · Las Vegas</div>
+<h3 style="margin: 0 0 4px; font-family: 'Playfair Display', Georgia, serif; font-weight: 500; font-size: 28px">Four Seasons Hotel</h3>
+<div style="font-style: italic; margin-bottom: 14px">Human Resources Intern</div>
+<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px">
+<li>Screened applicants, scheduled 13 interviews, and onboarded new hires in Workday</li>
+<li>Co-facilitated new hire orientation, service standards training, and succession planning</li>
+<li>Observed labor relations in a unionized workplace, including collective bargaining</li>
+</ul>
+</article>
+</div>
+<a href="assets/jordyn-cambeiro-resume.pdf" style="display: inline-flex; align-items: center; min-height: 48px; margin-top: 56px; padding: 0 26px; background: #6B1E2E; color: #F7E9E6; border-radius: 999px; text-decoration: none; font-weight: 600">Full resume</a>
+</section>
+
+<section id="research" style="background: #FFFFFF">
+<div style="max-width: 1160px; margin: 0 auto; padding: 112px 24px; display: flex; flex-wrap: wrap; gap: 56px">
+<div style="flex: 1 1 400px; min-width: 0">
+<p style="margin: 0 0 16px; font-size: 13px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #6B1E2E">Honors thesis</p>
+<h2 style="margin: 0 0 24px; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: clamp(38px, 4.6vw, 56px); line-height: 1.08; color: #6B1E2E">How does college shape <em>a career?</em></h2>
+<p style="margin: 0 0 20px">Advised by Professor Warren Lowell, I'm studying how residential mobility, social capital, and nonlinear paths shape graduates' career success. It's the same question a recruiter asks every day: what really drives someone's trajectory?</p>
+<p style="margin: 0; color: #6E5559">[One or two early findings, in Jordyn's words]</p>
+</div>
+<div style="flex: 1 1 380px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 24px; align-content: start">
+<div style="border-top: 1.5px solid #6B1E2E; padding-top: 16px"><div style="font-family: 'Playfair Display', Georgia, serif; font-size: 52px; line-height: 1; color: #6B1E2E">20</div><div style="font-size: 15px; margin-top: 8px">semi-structured alumni interviews</div></div>
+<div style="border-top: 1.5px solid #6B1E2E; padding-top: 16px"><div style="font-family: 'Playfair Display', Georgia, serif; font-size: 52px; line-height: 1; color: #6B1E2E">78</div><div style="font-size: 15px; margin-top: 8px">HOD alumni personally recruited</div></div>
+<div style="border-top: 1.5px solid #6B1E2E; padding-top: 16px"><div style="font-family: 'Playfair Display', Georgia, serif; font-size: 52px; line-height: 1; color: #6B1E2E">35</div><div style="font-size: 15px; margin-top: 8px">analytic categories coded in MAXQDA</div></div>
+<div style="border-top: 1.5px solid #6B1E2E; padding-top: 16px"><div style="font-family: 'Playfair Display', Georgia, serif; font-size: 52px; line-height: 1; color: #6B1E2E">4</div><div style="font-size: 15px; margin-top: 8px">themes synthesized from the data</div></div>
+</div>
+</div>
+</section>
+
+<section id="leadership" style="max-width: 1160px; margin: 0 auto; padding: 112px 24px">
+<p style="margin: 0 0 16px; font-size: 13px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #6B1E2E">Leadership</p>
+<h2 style="margin: 0 0 56px; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: clamp(38px, 4.6vw, 60px); line-height: 1.05; color: #6B1E2E">Building communities, <em>not just programs</em></h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px">
+<article style="background: #FFFFFF; border-radius: 12px; padding: 36px">
+<div style="font-size: 14px; color: #6E5559; margin-bottom: 6px">Founder &amp; President · 2020 to 2025</div>
+<h3 style="margin: 0 0 14px; font-family: 'Playfair Display', Georgia, serif; font-weight: 500; font-size: 26px">Empowering Immigrants</h3>
+<p style="margin: 0 0 18px">Founded a 501(c)(3) helping Spanish-speaking students learn English. Distributed 15,000+ flashcards across 8 Clark County schools and launched LEAF, an iOS and Android app with 1,500 users.</p>
+<div style="font-size: 14px; font-weight: 600; color: #6B1E2E">Prudential Emerging Visionary · Featured on ABC 13 &amp; Univision</div>
+</article>
+<article style="background: #FFFFFF; border-radius: 12px; padding: 36px">
+<div style="font-size: 14px; color: #6E5559; margin-bottom: 6px">Vice President &amp; Class Coordinator · 2024 to present</div>
+<h3 style="margin: 0 0 14px; font-family: 'Playfair Display', Georgia, serif; font-weight: 500; font-size: 26px">Cornelius Scholar Organization</h3>
+<p style="margin: 0">Oversee 5 committees for a 32-member scholar community. Designed a cross-grade mentorship program pairing 16 mentors and mentees, and a welcome-letter tradition for incoming scholars.</p>
+</article>
+<article style="background: #FFFFFF; border-radius: 12px; padding: 36px">
+<div style="font-size: 14px; color: #6E5559; margin-bottom: 6px">Class President, among other roles · 2016 to 2023</div>
+<h3 style="margin: 0 0 14px; font-family: 'Playfair Display', Georgia, serif; font-weight: 500; font-size: 26px">National Charity League</h3>
+<p style="margin: 0">500 hours of leadership development and philanthropy, with a focus on group collaboration, conflict resolution, and public speaking.</p>
+</article>
+</div>
+</section>
+
+<section id="loves" style="background: #6B1E2E; color: #F7E9E6">
+<div style="max-width: 1160px; margin: 0 auto; padding: 112px 24px">
+<h2 style="margin: 0 0 16px; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: clamp(38px, 4.6vw, 60px); line-height: 1.05">Beyond the resume</h2>
+<p style="margin: 0 0 56px; max-width: 520px; color: #EBCFD3">A few things that make me, me.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px">
+<figure style="margin: 0">
+<div role="img" aria-label="Photo placeholder: fashion" style="aspect-ratio: 4 / 5; background: #8A3445; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #F7E9E6">[Fashion photo]</div>
+<figcaption style="padding-top: 18px"><span style="display: block; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 26px">Fashion</span><span style="color: #EBCFD3">The brands, the business, and the people behind them.</span></figcaption>
+</figure>
+<figure style="margin: 0">
+<div role="img" aria-label="Photo placeholder: travel" style="aspect-ratio: 4 / 5; background: #8A3445; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #F7E9E6">[Travel photo]</div>
+<figcaption style="padding-top: 18px"><span style="display: block; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 26px">Travel</span><span style="color: #EBCFD3">Barcelona, London, and wherever is next.</span></figcaption>
+</figure>
+<figure style="margin: 0">
+<div role="img" aria-label="Photo placeholder: people" style="aspect-ratio: 4 / 5; background: #8A3445; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #F7E9E6">[People photo]</div>
+<figcaption style="padding-top: 18px"><span style="display: block; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 26px">New people, new experiences</span><span style="color: #EBCFD3">Every new conversation teaches me something.</span></figcaption>
+</figure>
+</div>
+</div>
+</section>
+
+<section id="contact" style="max-width: 1160px; margin: 0 auto; padding: 120px 24px 48px; text-align: center">
+<p style="margin: 0 0 16px; font-size: 13px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #6B1E2E">Contact</p>
+<h2 style="margin: 0 0 20px; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: clamp(42px, 5.6vw, 76px); line-height: 1.05; color: #6B1E2E">Let's <em>connect.</em></h2>
+<p style="margin: 0 auto 36px; max-width: 540px">I'm seeking full-time opportunities in executive search and human resources beginning in 2027. I'd welcome the chance to talk.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-bottom: 96px">
+<a href="mailto:jordyn.a.cambeiro@vanderbilt.edu" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 26px; background: #6B1E2E; color: #F7E9E6; border-radius: 999px; text-decoration: none; font-weight: 600">Email me</a>
+<a href="https://linkedin.com/in/jordyn-cambeiro" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 26px; border: 1.5px solid #6B1E2E; border-radius: 999px; text-decoration: none; font-weight: 600">LinkedIn</a>
+<a href="assets/jordyn-cambeiro-resume.pdf" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 26px; border: 1.5px solid #6B1E2E; border-radius: 999px; text-decoration: none; font-weight: 600">Resume</a>
+</div>
+<div style="font-size: 14px; color: #6E5559">© 2026 Jordyn Cambeiro</div>
+</section>
+
+</div>
+<script>
+(function () {
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('js-anim');
+
+
+  // Hand-drawn underline under italic words in headings
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      e.target.querySelector('.swoosh').classList.add('in');
+      io.unobserve(e.target);
+    });
+  }, { threshold: 0.8 });
+  document.querySelectorAll('h2 em').forEach(function (em) {
+    em.insertAdjacentHTML('beforeend', '<svg class="swoosh" viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M2 7 C 25 3, 60 2, 98 5"/></svg>');
+    io.observe(em);
+  });
+})();
+(function () {
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('js-anim');
+
+  // Reading progress bar
+  var bar = document.createElement('div');
+  bar.id = 'progress';
+  bar.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(bar);
+  function onScroll() {
+    var max = document.documentElement.scrollHeight - innerHeight;
+    bar.style.transform = 'scaleX(' + (max > 0 ? scrollY / max : 0) + ')';
+  }
+  addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Signature writes itself in, triggered once the line above it is in view
+  var sig = document.querySelector('#note p[style*="Mrs Saint Delafield"]');
+  var sigTrigger = sig.previousElementSibling;
+  sig.classList.add('sig');
+
+  // Research stats count up
+  var stats = document.querySelectorAll('#research [style*="font-size: 52px"]');
+
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      var el = e.target;
+      io.unobserve(el);
+      if (el === sigTrigger) { sig.classList.add('in'); return; }
+      var end = parseInt(el.textContent, 10), start = performance.now(), dur = 1400;
+      (function tick(now) {
+        var t = Math.min(1, (now - start) / dur);
+        el.textContent = Math.round(end * (1 - Math.pow(1 - t, 3)));
+        if (t < 1) requestAnimationFrame(tick);
+      })(start);
+    });
+  }, { threshold: 0.6 });
+  io.observe(sigTrigger);
+  stats.forEach(function (el) { io.observe(el); });
+})();
+(function () {
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('js-anim');
+  var targets = document.querySelectorAll([
+    '#top h1', '#top h1 + p', '#top h1 + p + div', '#top > div:last-child',
+    '#note p', '#work h2', '#work article', '#work > a',
+    '#research p', '#research h2', '#research [style*="border-top"]',
+    '#leadership > p', '#leadership h2', '#leadership article',
+    '#loves h2', '#loves h2 + p', '#loves figure', '#contact > *'
+  ].join(','));
+  var counts = new Map();
+  targets = Array.prototype.filter.call(targets, function (el) { return !el.classList.contains('sig'); });
+  targets.forEach(function (el) {
+    var n = counts.get(el.parentNode) || 0;
+    counts.set(el.parentNode, n + 1);
+    el.setAttribute('data-rv', Math.min(n, 6));
+    el.classList.add('rv');
+  });
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      var el = e.target;
+      el.classList.add('in');
+      io.unobserve(el);
+      // Hand control back to the hover transitions once revealed
+      el.addEventListener('transitionend', function done(ev) {
+        if (ev.target !== el) return;
+        el.classList.remove('rv', 'in');
+        el.removeAttribute('data-rv');
+        el.removeEventListener('transitionend', done);
+      });
+    });
+  }, { threshold: 0.1 });
+  targets.forEach(function (el) { io.observe(el); });
+})();
+</script>
+</body>
+</html>
